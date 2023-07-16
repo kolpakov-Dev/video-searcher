@@ -1,0 +1,188 @@
+.searchVideoPage {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.videoList {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.searchVideoPage h1 {
+  font-family: "Poppins", sans-serif;
+  margin-top: 15px;
+  color: white;
+}
+.searchVideoPage .inputBlock {
+  width: 45%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.searchVideoPage .inputBlock input {
+  padding: 10px;
+  border-radius: 15px;
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0 10px;
+}
+.searchVideoPage .numberInput {
+  width: 25% !important;
+}
+.searchVideoPage .searchBtn {
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+
+  cursor: pointer;
+  width: 20%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  transition: 0.2s all ease;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
+  background-color: white;
+}
+.searchVideoPage .searchBtn:hover {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+.searchVideoPage .writeText {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin-top: 50px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 25px;
+}
+
+.youtubeItem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 30%;
+  margin: 15px 1.5%;
+}
+.videoBlock {
+  position: relative;
+}
+.closeVideo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+.closeVideo svg {
+  width: 25px;
+  height: 25px;
+  color: white;
+}
+
+.youtubeItem img {
+  margin-top: 5px;
+  transition: 0.2s all ease;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0);
+}
+.youtubeItem img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.3);
+}
+.youtubeItem h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: white;
+}
+.favoriteLink {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  padding: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: white;
+  transition: 0.2s background ease;
+}
+.favoriteLink svg {
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  color: red;
+}
+.imageBlock {
+  position: relative;
+}
+.favoriteLink:hover {
+  background: #8c92ac;
+}
+.favoriteLink.active > svg {
+  color: red;
+}
+.loader {
+  height: 0;
+  width: 0;
+  padding: 15px;
+  border: 6px solid white;
+  border-right-color: #8c92ac;
+  border-radius: 22px;
+  animation: rotate 1s infinite linear;
+  /* left, top and position just for the demo! */
+  margin: 100px auto 0 auto;
+}
+
+@keyframes rotate {
+  /* 100% keyframe for  clockwise. 
+       use 0% instead for anticlockwise */
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@media (max-width: 500px) {
+  .searchVideoPage h1 {
+    text-align: center;
+  }
+
+  .searchVideoPage .inputBlock {
+    width: 95%;
+    margin: 20px auto;
+    flex-wrap: wrap;
+  }
+  .searchVideoPage .inputBlock input {
+    width: 100%;
+    margin: 10px 0px;
+    padding: 15px;
+  }
+  .searchVideoPage .numberInput {
+    width: 30% !important;
+  }
+  .searchVideoPage .searchBtn {
+    width: 35%;
+  }
+  .videoList {
+    flex-direction: column;
+    width: 100%;
+  }
+  .youtubeItem {
+    width: 100%;
+    margin: 15px 0;
+  }
+  .youtubeItem h2 {
+    text-align: center;
+  }
+}
